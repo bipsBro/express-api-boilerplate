@@ -1,12 +1,15 @@
-import express = require('express');
+import * as express from "express";
+import { Server } from "http";
+import app from "./app";
+import routes from "./routes";
 
-// Create a new express application instance
-const app: express.Application = express();
+app.setRoutes(routes);
+let application: express.Application;
+let server: Server;
 
-app.get('/', function (_req, res) {
-  res.send('Hello World! kx');
+app.run().then(res => {
+  application = res.app;
+  server = res.server;
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port http://localhost:3000!');
-});
+export { application, server };

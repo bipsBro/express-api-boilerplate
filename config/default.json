@@ -1,0 +1,21 @@
+{
+    "name": "rest-api-typescript",
+    "port": 3000,
+    "cors": {
+      "origins": [".turing.test$"]
+    },
+    "jwt": {
+      "iss": "http://turing.test",
+      "secret": "sdf$#sdf56SDGw45"
+    },
+    "facebook": {
+      "clientId": "",
+      "secret": ""
+    },
+    "db": {
+      "host": "localhost",
+      "user": "root",
+      "password": "root",
+      "database": "turing"
+    }
+  }
