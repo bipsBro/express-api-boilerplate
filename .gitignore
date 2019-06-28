@@ -12,6 +12,9 @@ dist
 # config file
 config/development.json
 
+#certificates files
+certificates
+
 # misc
 .DS_Store
 .env
